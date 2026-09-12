@@ -11,9 +11,8 @@ Available scripts:
 | Command | What it does |
 |---|---|
 | `npm run dev` | Run the site locally |
-| `npm run build` | Build the site for deploy (used by Vercel) |
-| `npm run typecheck` | Check TypeScript errors |
-| `npm run build:check` | Type-check, then build (use before pushing) |
+| `npm run build` | Type-check and build the site (used by Vercel) |
+| `npm run typecheck` | Check TypeScript errors only |
 
 ---
 
@@ -138,7 +137,7 @@ The **first** time someone submits the form, FormSubmit emails that Gmail addres
 After you change the site locally, check it first:
 
 ```powershell
-npm run build:check
+npm run build
 ```
 
 Then publish:
@@ -155,28 +154,25 @@ Vercel will rebuild and republish automatically.
 
 ## Troubleshooting
 
-### `tsc: Permission denied` and `exited with 126`
+### `Permission denied` and `exited with 126` on Vercel
 
-Full error looks like this:
+Errors look like this:
 
 ```
-sh: line 1: /vercel/path0/node_modules/.bin/tsc: Permission denied
+sh: line 1: /vercel/path0/node_modules/.bin/vite: Permission denied
 Error: Command "npm run build" exited with 126
 ```
 
-Cause: TypeScript 7 runs a native binary, and Vercel's Linux build machine could not execute it.
+Cause: `node_modules` was committed to GitHub. Windows Git does not keep Linux "executable" permissions, so Vercel reused those broken files instead of installing fresh ones. The giveaway in the log is a tiny install such as `added 7 packages, and removed 6 packages`.
 
-Fix: already applied in this project. The deploy build now runs only `vite build`, and type-checking happens locally with `npm run typecheck`.
+Fix, already applied in this project:
 
-If you still see this error on Vercel, make sure you pushed the current `package.json`, where the scripts look like this:
+1. Added `.gitignore` with `node_modules` and `dist`
+2. Removed both from Git tracking with `git rm -r --cached node_modules dist`
 
-```json
-"typecheck": "node ./node_modules/typescript/bin/tsc -b",
-"build": "vite build",
-"build:check": "npm run typecheck && npm run build"
-```
+A healthy Vercel log installs hundreds of packages, for example `added 320 packages`.
 
-Then in Vercel, open the project → **Deployments** → **Redeploy**, and turn **off** "Use existing build cache".
+Never commit `node_modules` or `dist`. Vercel builds those itself.
 
 ---
 
