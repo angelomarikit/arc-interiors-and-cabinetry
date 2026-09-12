@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "vite",
     "prepare:images": "node scripts/prepare-images.mjs",
-    "build": "tsc -b && vite build",
+    "typecheck": "node ./node_modules/typescript/bin/tsc -b",
+    "build": "vite build",
+    "build:check": "npm run typecheck && npm run build",
     "preview": "vite preview"
   },
   "keywords": [],

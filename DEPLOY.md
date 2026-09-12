@@ -6,6 +6,15 @@ Output folder: `dist`
 
 You do **not** need to run `npm run prepare:images` for deploy. The optimized images are already in `public/images`.
 
+Available scripts:
+
+| Command | What it does |
+|---|---|
+| `npm run dev` | Run the site locally |
+| `npm run build` | Build the site for deploy (used by Vercel) |
+| `npm run typecheck` | Check TypeScript errors |
+| `npm run build:check` | Type-check, then build (use before pushing) |
+
 ---
 
 ## 1. Install Git
@@ -126,7 +135,13 @@ The **first** time someone submits the form, FormSubmit emails that Gmail addres
 
 ### Later website updates
 
-After you change the site locally:
+After you change the site locally, check it first:
+
+```powershell
+npm run build:check
+```
+
+Then publish:
 
 ```powershell
 git add .
@@ -135,6 +150,33 @@ git push
 ```
 
 Vercel will rebuild and republish automatically.
+
+---
+
+## Troubleshooting
+
+### `tsc: Permission denied` and `exited with 126`
+
+Full error looks like this:
+
+```
+sh: line 1: /vercel/path0/node_modules/.bin/tsc: Permission denied
+Error: Command "npm run build" exited with 126
+```
+
+Cause: TypeScript 7 runs a native binary, and Vercel's Linux build machine could not execute it.
+
+Fix: already applied in this project. The deploy build now runs only `vite build`, and type-checking happens locally with `npm run typecheck`.
+
+If you still see this error on Vercel, make sure you pushed the current `package.json`, where the scripts look like this:
+
+```json
+"typecheck": "node ./node_modules/typescript/bin/tsc -b",
+"build": "vite build",
+"build:check": "npm run typecheck && npm run build"
+```
+
+Then in Vercel, open the project → **Deployments** → **Redeploy**, and turn **off** "Use existing build cache".
 
 ---
 
