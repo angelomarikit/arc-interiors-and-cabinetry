@@ -19,12 +19,12 @@ export default function App() {
       <main>
         <Hero />
         <Introduction />
+        <About />
         <SpaceCategories onSelect={selectSpace} />
         <FeaturedProjects onSelect={selectSpace} />
         <ProjectGallery activeFilter={activeFilter} onFilterChange={setActiveFilter} />
         <Philosophy />
         <Process />
-        <About />
         <Contact />
       </main>
       <Footer />

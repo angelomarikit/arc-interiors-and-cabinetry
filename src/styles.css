@@ -197,7 +197,8 @@ h2 em, h1 em { font-weight: 400; }
 .about-copy strong { color: #111; font-weight: 600; }
 .about-copy .text-link { margin-top: 24px; }
 
-.contact-cta { position: relative; overflow: hidden; padding: clamp(100px, 13vw, 190px) 0; color: #fff; background: #0f0f0f; text-align: center; }
+/* The hairline separates this band from the dark process section above it. */
+.contact-cta { position: relative; overflow: hidden; padding: clamp(100px, 13vw, 190px) 0; border-top: 1px solid #262626; color: #fff; background: #0f0f0f; text-align: center; }
 .contact-cta > .container { position: relative; }
 .contact-cta h2 { margin-bottom: 32px; font-size: clamp(4rem, 8vw, 8rem); }
 .contact-cta h2 em { color: #7d7d7d; }

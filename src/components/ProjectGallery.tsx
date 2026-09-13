@@ -36,6 +36,7 @@ function useThumbnailStrip() {
 export function ProjectGallery({ activeFilter, onFilterChange }: ProjectGalleryProps) {
   const [openIndex, setOpenIndex] = useState(-1);
   const tabsRef = useRef<HTMLDivElement>(null);
+  const hasChangedFilter = useRef(false);
   const showThumbnails = useThumbnailStrip();
 
   const filtered = useMemo(
@@ -44,9 +45,22 @@ export function ProjectGallery({ activeFilter, onFilterChange }: ProjectGalleryP
   );
   const preview = filtered.slice(0, PREVIEW_COUNT);
 
+  // Center the active tab inside its own strip only. scrollIntoView would also
+  // scroll the page itself, which on first load jumps away from the hero.
   useEffect(() => {
-    const active = tabsRef.current?.querySelector<HTMLButtonElement>('[aria-selected="true"]');
-    active?.scrollIntoView({ block: "nearest", inline: "center", behavior: "smooth" });
+    if (!hasChangedFilter.current) {
+      hasChangedFilter.current = true;
+      return;
+    }
+
+    const strip = tabsRef.current;
+    const active = strip?.querySelector<HTMLButtonElement>('[aria-selected="true"]');
+    if (!strip || !active) return;
+
+    strip.scrollTo({
+      left: active.offsetLeft - (strip.clientWidth - active.clientWidth) / 2,
+      behavior: "smooth",
+    });
   }, [activeFilter]);
 
   return (
