@@ -1,5 +1,6 @@
 import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
+import { BrandMark } from "./BrandMark";
 
 const links = ["Home", "About", "Spaces", "Projects", "Contact"];
 
@@ -26,8 +27,7 @@ export function Header() {
   return (
     <header className={`site-header ${scrolled || open ? "is-solid" : ""}`}>
       <a className="brand" href="#home" aria-label="ARC Interiors and Cabinetry home">
-        <img src="/images/brand/arc-mark.png" alt="" width="44" height="44" />
-        <span>ARC <small>Interiors &amp; Cabinetry</small></span>
+        <BrandMark />
       </a>
 
       <nav className="desktop-nav" aria-label="Main navigation">

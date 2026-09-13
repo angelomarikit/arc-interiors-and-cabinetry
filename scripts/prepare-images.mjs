@@ -8,7 +8,7 @@ const categories = [
   ["Bedroom", "Bedroom", "bedroom"],
   ["Cabinets", "Cabinets", "cabinets"],
   ["Kitchen", "Kitchen", "kitchen"],
-  ["Living Room-Dining Room", "Living Room – Dining Room", "living-dining"],
+  ["Living Room-Dining Room", "Living Room / Dining Room", "living-dining"],
   ["Toilet", "Toilet", "toilet"],
 ];
 
@@ -16,7 +16,7 @@ const titleSets = {
   Bedroom: ["Bedroom Interior", "Integrated Wardrobe", "Bedroom Cabinetry", "Custom Bed Wall"],
   Cabinets: ["Custom Storage Cabinet", "Built-In Cabinetry", "Display Cabinet", "Integrated Storage"],
   Kitchen: ["Modern Kitchen Cabinetry", "Custom Kitchen", "Kitchen Storage", "Built-In Kitchen"],
-  "Living Room – Dining Room": ["Living Room Interior", "Dining Area Cabinetry", "Entertainment Unit", "Connected Living Space"],
+  "Living Room / Dining Room": ["Living Room Interior", "Dining Area Cabinetry", "Entertainment Unit", "Connected Living Space"],
   Toilet: ["Toilet Interior", "Custom Vanity", "Bathroom Cabinetry", "Integrated Vanity Storage"],
 };
 
@@ -120,7 +120,17 @@ await sharp(path.join(root, "LOGO", "Logo-Model CIRCULARpng.png"))
   .png({ compressionLevel: 9 })
   .toFile(path.join(outputRoot, "brand", "arc-mark.png"));
 
-const data = `import type { ProjectImage } from "../types/project";\n\n// Edit this file to reorder, rename, feature, or recategorize catalog images.\nexport const projects: ProjectImage[] = ${JSON.stringify(projects, null, 2)};\n`;
+const data = `import type { ProjectImage } from "../types/project";
+import { projectTitleOverrides } from "./projectOverrides";
+
+// Generated image metadata. Client-approved names are applied below.
+const generatedProjects: ProjectImage[] = ${JSON.stringify(projects, null, 2)};
+
+export const projects: ProjectImage[] = generatedProjects.map((project) => {
+  const title = projectTitleOverrides[project.id] ?? project.title;
+  return { ...project, title, alt: \`\${title} by ARC Interiors & Cabinetry\` };
+});
+`;
 await fs.mkdir(path.join(root, "src", "data"), { recursive: true });
 await fs.writeFile(path.join(root, "src", "data", "projects.ts"), data);
 console.log(`Prepared ${projects.length} project images.`);

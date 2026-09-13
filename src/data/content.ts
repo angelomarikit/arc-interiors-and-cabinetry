@@ -4,7 +4,7 @@ export const filters: ProjectFilter[] = [
   "Bedroom",
   "Cabinets",
   "Kitchen",
-  "Living Room – Dining Room",
+  "Living Room / Dining Room",
   "Toilet",
 ];
 
@@ -29,7 +29,7 @@ export const spaces: Array<{
     imageId: "kitchen-kitchen-f-r1",
   },
   {
-    name: "Living Room – Dining Room",
+    name: "Living Room / Dining Room",
     description: "Connected living spaces designed for everyday comfort, display, storage, and visual continuity.",
     imageId: "living-dining-living-fa",
   },

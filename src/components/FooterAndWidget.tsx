@@ -1,6 +1,7 @@
 import { MessageCircle, Phone, X } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { faqs } from "../data/content";
+import { BrandMark } from "./BrandMark";
 
 export function Footer() {
   const links = ["Home", "About", "Spaces", "Projects", "Contact"];
@@ -8,7 +9,10 @@ export function Footer() {
     <footer className="footer">
       <div className="container footer-grid">
         <div className="footer-brand">
-          <a className="brand" href="#home"><img src="/images/brand/arc-mark.png" alt="" width="50" height="50" /><span>ARC <small>Interiors &amp; Cabinetry</small></span></a>
+          <a className="brand footer-brand-link" href="#home" aria-label="ARC Interiors and Cabinetry home">
+            <BrandMark />
+            <span>ARC <small>Interiors &amp; Cabinetry</small></span>
+          </a>
           <p>Custom interiors and cabinetry designed around function, aesthetics, and everyday living.</p>
         </div>
         <nav aria-label="Footer navigation"><small>Navigation</small>{links.map((link) => <a key={link} href={`#${link.toLowerCase()}`}>{link}</a>)}</nav>

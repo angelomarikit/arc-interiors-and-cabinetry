@@ -1,7 +1,8 @@
 import type { ProjectImage } from "../types/project";
+import { projectTitleOverrides } from "./projectOverrides";
 
-// Edit this file to reorder, rename, feature, or recategorize catalog images.
-export const projects: ProjectImage[] = [
+// Generated image metadata. Client-approved names are applied below.
+const generatedProjects = [
   {
     "id": "bedroom-bed1-b",
     "src": "/images/projects/bedroom/bedroom-bed1-b-gallery.webp",
@@ -807,5 +808,201 @@ export const projects: ProjectImage[] = [
     "height": 1712,
     "orientation": "landscape",
     "order": 62
+  },
+  {
+    "id": "bedroom-bed-1",
+    "src": "/images/projects/bedroom/bedroom-bed-1-gallery.webp",
+    "fullSrc": "/images/projects/bedroom/bedroom-bed-1-full.webp",
+    "alt": "Bedroom Interior by ARC Interiors & Cabinetry",
+    "title": "Bedroom Interior",
+    "category": "Bedroom",
+    "featured": false,
+    "width": 1364,
+    "height": 911,
+    "orientation": "landscape",
+    "order": 63
+  },
+  {
+    "id": "bedroom-bed-2",
+    "src": "/images/projects/bedroom/bedroom-bed-2-gallery.webp",
+    "fullSrc": "/images/projects/bedroom/bedroom-bed-2-full.webp",
+    "alt": "Integrated Wardrobe by ARC Interiors & Cabinetry",
+    "title": "Integrated Wardrobe",
+    "category": "Bedroom",
+    "featured": false,
+    "width": 1360,
+    "height": 906,
+    "orientation": "landscape",
+    "order": 64
+  },
+  {
+    "id": "bedroom-bed-3",
+    "src": "/images/projects/bedroom/bedroom-bed-3-gallery.webp",
+    "fullSrc": "/images/projects/bedroom/bedroom-bed-3-full.webp",
+    "alt": "Bedroom Cabinetry by ARC Interiors & Cabinetry",
+    "title": "Bedroom Cabinetry",
+    "category": "Bedroom",
+    "featured": false,
+    "width": 1454,
+    "height": 813,
+    "orientation": "landscape",
+    "order": 65
+  },
+  {
+    "id": "bedroom-bed-4",
+    "src": "/images/projects/bedroom/bedroom-bed-4-gallery.webp",
+    "fullSrc": "/images/projects/bedroom/bedroom-bed-4-full.webp",
+    "alt": "Custom Bed Wall by ARC Interiors & Cabinetry",
+    "title": "Custom Bed Wall",
+    "category": "Bedroom",
+    "featured": false,
+    "width": 1184,
+    "height": 905,
+    "orientation": "landscape",
+    "order": 66
+  },
+  {
+    "id": "cabinets-cab-1",
+    "src": "/images/projects/cabinets/cabinets-cab-1-gallery.webp",
+    "fullSrc": "/images/projects/cabinets/cabinets-cab-1-full.webp",
+    "alt": "Custom Storage Cabinet by ARC Interiors & Cabinetry",
+    "title": "Custom Storage Cabinet",
+    "category": "Cabinets",
+    "featured": false,
+    "width": 599,
+    "height": 904,
+    "orientation": "portrait",
+    "order": 67
+  },
+  {
+    "id": "cabinets-cab-2",
+    "src": "/images/projects/cabinets/cabinets-cab-2-gallery.webp",
+    "fullSrc": "/images/projects/cabinets/cabinets-cab-2-full.webp",
+    "alt": "Built-In Cabinetry by ARC Interiors & Cabinetry",
+    "title": "Built-In Cabinetry",
+    "category": "Cabinets",
+    "featured": false,
+    "width": 1257,
+    "height": 903,
+    "orientation": "landscape",
+    "order": 68
+  },
+  {
+    "id": "cabinets-cab-3",
+    "src": "/images/projects/cabinets/cabinets-cab-3-gallery.webp",
+    "fullSrc": "/images/projects/cabinets/cabinets-cab-3-full.webp",
+    "alt": "Display Cabinet by ARC Interiors & Cabinetry",
+    "title": "Display Cabinet",
+    "category": "Cabinets",
+    "featured": false,
+    "width": 1361,
+    "height": 909,
+    "orientation": "landscape",
+    "order": 69
+  },
+  {
+    "id": "cabinets-cab-4",
+    "src": "/images/projects/cabinets/cabinets-cab-4-gallery.webp",
+    "fullSrc": "/images/projects/cabinets/cabinets-cab-4-full.webp",
+    "alt": "Integrated Storage by ARC Interiors & Cabinetry",
+    "title": "Integrated Storage",
+    "category": "Cabinets",
+    "featured": false,
+    "width": 599,
+    "height": 909,
+    "orientation": "portrait",
+    "order": 70
+  },
+  {
+    "id": "cabinets-cab-5",
+    "src": "/images/projects/cabinets/cabinets-cab-5-gallery.webp",
+    "fullSrc": "/images/projects/cabinets/cabinets-cab-5-full.webp",
+    "alt": "Custom Storage Cabinet by ARC Interiors & Cabinetry",
+    "title": "Custom Storage Cabinet",
+    "category": "Cabinets",
+    "featured": false,
+    "width": 604,
+    "height": 910,
+    "orientation": "portrait",
+    "order": 71
+  },
+  {
+    "id": "cabinets-tv-cabinet-1",
+    "src": "/images/projects/cabinets/cabinets-tv-cabinet-1-gallery.webp",
+    "fullSrc": "/images/projects/cabinets/cabinets-tv-cabinet-1-full.webp",
+    "alt": "TV Cabinet by ARC Interiors & Cabinetry",
+    "title": "TV Cabinet",
+    "category": "Cabinets",
+    "featured": false,
+    "width": 570,
+    "height": 848,
+    "orientation": "portrait",
+    "order": 72
+  },
+  {
+    "id": "cabinets-tv-cabinet-2",
+    "src": "/images/projects/cabinets/cabinets-tv-cabinet-2-gallery.webp",
+    "fullSrc": "/images/projects/cabinets/cabinets-tv-cabinet-2-full.webp",
+    "alt": "TV Cabinet by ARC Interiors & Cabinetry",
+    "title": "TV Cabinet",
+    "category": "Cabinets",
+    "featured": false,
+    "width": 607,
+    "height": 909,
+    "orientation": "portrait",
+    "order": 73
+  },
+  {
+    "id": "cabinets-tv-cabinet-3",
+    "src": "/images/projects/cabinets/cabinets-tv-cabinet-3-gallery.webp",
+    "fullSrc": "/images/projects/cabinets/cabinets-tv-cabinet-3-full.webp",
+    "alt": "TV Cabinet by ARC Interiors & Cabinetry",
+    "title": "TV Cabinet",
+    "category": "Cabinets",
+    "featured": false,
+    "width": 659,
+    "height": 903,
+    "orientation": "portrait",
+    "order": 74
+  },
+  {
+    "id": "kitchen-kitchen-1",
+    "src": "/images/projects/kitchen/kitchen-kitchen-1-gallery.webp",
+    "fullSrc": "/images/projects/kitchen/kitchen-kitchen-1-full.webp",
+    "alt": "Modern Kitchen Cabinetry by ARC Interiors & Cabinetry",
+    "title": "Modern Kitchen Cabinetry",
+    "category": "Kitchen",
+    "featured": false,
+    "width": 1363,
+    "height": 905,
+    "orientation": "landscape",
+    "order": 75
+  },
+  {
+    "id": "living-dining-living-room-1",
+    "src": "/images/projects/living-dining/living-dining-living-room-1-gallery.webp",
+    "fullSrc": "/images/projects/living-dining/living-dining-living-room-1-full.webp",
+    "alt": "Living Room Interior by ARC Interiors & Cabinetry",
+    "title": "Living Room Interior",
+    "category": "Living Room / Dining Room",
+    "featured": false,
+    "width": 1357,
+    "height": 897,
+    "orientation": "landscape",
+    "order": 76
   }
 ];
+
+export const projects: ProjectImage[] = generatedProjects.map((project) => {
+  const title = projectTitleOverrides[project.id] ?? project.title;
+
+  return {
+    ...project,
+    title,
+    category:
+      project.category === "Living Room – Dining Room"
+        ? "Living Room / Dining Room"
+        : project.category,
+    alt: `${title} by ARC Interiors & Cabinetry`,
+  } as ProjectImage;
+});

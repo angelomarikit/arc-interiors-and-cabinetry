@@ -33,10 +33,10 @@ export function Introduction() {
     <section className="section intro" id="introduction">
       <div className="container intro-grid">
         <p className="eyebrow">ARC / Pasig &amp; Biñan</p>
-        <h2>Thoughtful interiors.<br /><em>Custom craftsmanship.</em></h2>
+        <h2>Transforming Space,<br /><em>Crafting Dreams.</em></h2>
         <div className="intro-copy">
-          <p>ARC Interiors &amp; Cabinetry creates functional, refined, and personalized interiors with a focus on custom cabinetry, considered space planning, and timeless design.</p>
-          <p>We balance aesthetics, storage, comfort, and everyday functionality across the key spaces of the home.</p>
+          <p>At ARC Interiors, we believe that your home or office space should be a reflection of who you are. That’s why we offer personalized interior design services that cater to your unique taste and style. Our team of experienced designers and craftsmen work together to create a space that is both functional and beautiful.</p>
+          <p>We specialize in custom cabinetry that is tailored to fit your needs and preferences. Whether you want to revamp your living room, kitchen, or entire home, we offer free design consultation and estimate to help you get started. Contact us today to schedule a consultation and let us help you transform your space into your dream environment.</p>
         </div>
       </div>
     </section>

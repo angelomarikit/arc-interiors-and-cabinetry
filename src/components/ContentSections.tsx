@@ -59,13 +59,13 @@ export function About() {
     <section className="section about-section" id="about">
       <div className="container about-grid">
         <div className="about-image">
-          <img src="/images/projects/bedroom/bedroom-bedroom-1-f-gallery.webp" alt="Refined bedroom interior designed by ARC Interiors & Cabinetry" width="2500" height="1500" loading="lazy" />
+          <img src="/images/projects/living-dining/living-dining-living-fa-gallery.webp" alt="Living and dining interior designed by ARC Interiors & Cabinetry" width="2500" height="1600" loading="lazy" />
         </div>
         <div className="about-copy">
           <p className="eyebrow">About the studio</p>
           <h2>Interiors that work beautifully.</h2>
-          <p>ARC Interiors &amp; Cabinetry provides custom interior and cabinetry solutions for residential spaces, including bedrooms, kitchens, living and dining areas, toilets, and other custom interior requirements.</p>
-          <p>Led by <strong>Ernie Arcilla</strong>, we work closely with clients to create solutions based on their space, requirements, and preferred style.</p>
+          <p>ARC Interiors &amp; Cabinetry is an interior design studio that specializes in providing high-quality interior design solutions, fitting out, and cabinetry. Our team of expert designers and craftsmen will work closely with you to create customized design plans that reflect your unique style and preferences.</p>
+          <p>Whether you are looking to update a single room or completely overhaul your entire space, we are here to help. At ARC Interiors, we offer free design consultation and estimate to help you get started on your dream project.</p>
           <a className="text-link" href="#contact">Start a conversation <ArrowUpRight /></a>
         </div>
       </div>
@@ -129,7 +129,7 @@ export function Contact() {
           <div className="contact-intro">
             <p className="eyebrow">Project inquiry</p>
             <h2>Tell us about<br /><em>your space.</em></h2>
-            <p>Share a few details about the space you are planning. Your inquiry will be sent directly to Ernie Arcilla.</p>
+            <p>Share a few details about the space you are planning. Your inquiry will be sent directly to our Planning and Design team.</p>
             <div className="direct-contact">
               <small>Prefer to call?</small>
               <a href="tel:09456512620"><Phone /> 0945 651 2620</a>
@@ -161,7 +161,7 @@ export function Contact() {
                 <option>Bedroom</option>
                 <option>Cabinets</option>
                 <option>Kitchen</option>
-                <option>Living Room – Dining Room</option>
+                <option>Living Room / Dining Room</option>
                 <option>Toilet</option>
                 <option>Other interior space</option>
               </select>

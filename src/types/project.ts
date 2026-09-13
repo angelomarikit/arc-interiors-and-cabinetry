@@ -2,7 +2,7 @@ export type ProjectCategory =
   | "Bedroom"
   | "Cabinets"
   | "Kitchen"
-  | "Living Room – Dining Room"
+  | "Living Room / Dining Room"
   | "Toilet";
 
 export type ProjectFilter = ProjectCategory;
