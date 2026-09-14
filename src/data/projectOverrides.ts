@@ -33,6 +33,7 @@ export const projectTitleOverrides: Readonly<Record<string, string>> = {
   // Living Room / Dining Room
   "living-dining-cam-1210a": "Hip and Young Living Area",
   "living-dining-cam-1210b": "Minimal yet Functional Dining Space",
+  "living-dining-dining-area": "Monochromatic Identity",
   "living-dining-dining-fa": "Natural Tone Accent",
   "living-dining-dining": "Living – Dining Connectivity",
   "living-dining-dining02": "Seamless flow",
@@ -44,9 +45,11 @@ export const projectTitleOverrides: Readonly<Record<string, string>> = {
   "living-dining-img-6432": "Guest-friendly Setup",
   "living-dining-living-1aa": "Airy Layout Feel",
   "living-dining-living-f": "Social Circulation",
+  "living-dining-living-fa": "Black Accents on Earth Tones",
   "living-dining-living-room-1": "Natural Tone Textured Wall",
   "living-dining-living-room-1a": "Black Bold Approach",
-  "living-dining-yl-living-room-1": "Living/Kitchen Solution",
+  "living-dining-living-room-3": "Living / Kitchen Solution",
+  "living-dining-yl-living-room-1": "Living / Kitchen Solution",
 
   // Toilet
   "toilet-2f-guest-bathroom-a": "Sleek Sanitary Space",
