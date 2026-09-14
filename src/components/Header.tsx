@@ -28,6 +28,7 @@ export function Header() {
     <header className={`site-header ${scrolled || open ? "is-solid" : ""}`}>
       <a className="brand" href="#home" aria-label="ARC Interiors and Cabinetry home">
         <BrandMark />
+        <span>ARC <small>Interiors &amp; Cabinetry</small></span>
       </a>
 
       <nav className="desktop-nav" aria-label="Main navigation">

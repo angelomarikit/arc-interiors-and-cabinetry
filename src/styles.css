@@ -51,8 +51,11 @@ h2 em, h1 em, h3 em { font-weight: 400; font-style: normal; }
 }
 .site-header.is-solid { height: 68px; color: var(--ink); background: rgba(247,247,245,.94); border-bottom: 1px solid rgba(17,17,17,.1); backdrop-filter: blur(14px); }
 .brand { display: inline-flex; width: max-content; align-items: center; gap: 12px; font-size: 18px; font-weight: 600; letter-spacing: -.04em; }
-.brand-mark { width: 46px; height: 38px; overflow: visible; stroke: currentColor; stroke-width: 3; stroke-linecap: square; stroke-linejoin: miter; }
-.brand-mark-handle { stroke-width: 2; }
+.brand-mark {
+  display: block; flex: 0 0 auto; width: 40px; aspect-ratio: 1.099; background-color: currentColor;
+  -webkit-mask: url("/images/brand/arc-logo.png") center / contain no-repeat;
+  mask: url("/images/brand/arc-logo.png") center / contain no-repeat;
+}
 .brand span { line-height: .9; }
 .brand small { display: block; margin-top: 6px; font-size: 8px; font-weight: 500; letter-spacing: .08em; text-transform: uppercase; }
 .desktop-nav { display: flex; gap: clamp(22px, 2.6vw, 42px); }
@@ -256,7 +259,7 @@ h2 em, h1 em, h3 em { font-weight: 400; font-style: normal; }
 
 .footer { padding: 90px 0 28px; color: #fff; background: #0c0c0c; }
 .footer-grid { display: grid; grid-template-columns: 1.5fr .55fr .95fr; gap: 80px; padding-bottom: 90px; }
-.footer-brand-link .brand-mark { width: 52px; height: 43px; }
+.footer-brand-link .brand-mark { width: 46px; }
 .footer-brand .brand { margin-bottom: 35px; }
 .footer-brand p { max-width: 390px; color: #888; font-size: 13px; line-height: 1.7; }
 .footer nav, .footer-contact { display: flex; flex-direction: column; align-items: flex-start; gap: 14px; }
@@ -317,7 +320,7 @@ h2 em, h1 em, h3 em { font-weight: 400; font-style: normal; }
   .section { padding: 88px 0; }
   .site-header { height: 66px; padding: 0 18px; }
   .site-header.is-solid { height: 62px; }
-  .site-header .brand-mark { width: 40px; height: 33px; }
+  .site-header .brand-mark { width: 33px; }
   .brand { font-size: 16px; }
   .hero { min-height: 740px; }
   .hero > img { object-position: 54% center; }
