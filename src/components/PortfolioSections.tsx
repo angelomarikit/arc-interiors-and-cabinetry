@@ -13,9 +13,9 @@ export function Hero() {
       <img src="/images/hero/arc-hero.webp" alt="Custom living room and cabinetry by ARC Interiors & Cabinetry" width="2560" height="1440" />
       <div className="hero-shade" />
       <div className="hero-content container">
-        <p className="eyebrow light">Interiors / Custom cabinetry</p>
+        <p className="eyebrow light">ARC Interiors / Modular cabinets</p>
         <h1>Spaces designed with purpose.<br /><em>Built with precision.</em></h1>
-        <p className="hero-copy">Custom interiors and cabinetry crafted for modern homes, functional spaces, and timeless living.</p>
+        <p className="hero-copy">ARC Interiors crafts house renovation, condo renovation, and modular cabinets for modern homes in the Philippines.</p>
         <div className="hero-actions">
           <a className="button button-light" href="#projects">Explore our work <ArrowUpRight /></a>
           <a className="text-link light" href="#contact">Request a consultation</a>

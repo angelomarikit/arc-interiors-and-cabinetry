@@ -163,6 +163,10 @@ export function Contact() {
                 <option>Kitchen</option>
                 <option>Living Room / Dining Room</option>
                 <option>Toilet</option>
+                <option>House Renovation</option>
+                <option>Condo Renovation</option>
+                <option>DMCI Condo Renovation</option>
+                <option>Modular Cabinet</option>
                 <option>Other interior space</option>
               </select>
             </label>

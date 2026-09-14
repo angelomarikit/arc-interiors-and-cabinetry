@@ -13,7 +13,7 @@ export function Footer() {
             <BrandMark />
             <span>ARC <small>Interiors &amp; Cabinetry</small></span>
           </a>
-          <p>Custom interiors and cabinetry designed around function, aesthetics, and everyday living.</p>
+          <p>ARC Interiors — house renovation, condo renovation, DMCI condo renovation, and modular cabinets in the Philippines.</p>
         </div>
         <nav aria-label="Footer navigation"><small>Navigation</small>{links.map((link) => <a key={link} href={`#${link.toLowerCase()}`}>{link}</a>)}</nav>
         <div className="footer-contact"><small>Contact</small><a href="tel:09456512620">0945 651 2620</a><p>Satori Residences, F. Pasco Avenue,<br />Santolan, Pasig</p><p>41 Ginger St., Jubilation South,<br />Biñan, Laguna</p></div>
@@ -49,7 +49,7 @@ export function FAQWidget() {
             <button type="button" onClick={() => setOpen(false)} aria-label="Close questions"><X /></button>
           </div>
           <div className="widget-questions">
-            {faqs.slice(0, 8).map((faq, index) => (
+            {faqs.slice(0, 9).map((faq, index) => (
               <button key={faq.question} type="button" onClick={() => setActive(active === index ? null : index)} aria-expanded={active === index}>
                 <span>{faq.question}</span><b>{active === index ? "−" : "+"}</b>
                 {active === index && <small>{faq.short}</small>}

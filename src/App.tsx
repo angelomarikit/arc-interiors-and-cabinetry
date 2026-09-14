@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Header } from "./components/Header";
+import { Seo } from "./components/Seo";
 import { Hero, Introduction, SpaceCategories, FeaturedProjects } from "./components/PortfolioSections";
 import { About, Contact, Philosophy, Process } from "./components/ContentSections";
 import { ProjectGallery } from "./components/ProjectGallery";
@@ -15,6 +16,7 @@ export default function App() {
 
   return (
     <>
+      <Seo />
       <Header />
       <main>
         <Hero />

@@ -1,7 +1,7 @@
 {
   "name": "arc-interiors-and-cabinetry",
   "version": "1.0.0",
-  "description": "Premium portfolio website for ARC Interiors & Cabinetry.",
+  "description": "ARC Interiors & Cabinetry website: house renovation, modular cabinet maker, modular cabinets Philippines, DMCI condo renovation, and condo renovation.",
   "private": true,
   "scripts": {
     "dev": "vite",
@@ -10,7 +10,16 @@
     "build": "npm run typecheck && vite build",
     "preview": "vite preview"
   },
-  "keywords": [],
+  "keywords": [
+    "House Renovation",
+    "Modular Cabinet",
+    "Modular Cabinet Maker",
+    "Modular Cabinets Philippines",
+    "DMCI Condo Renovation",
+    "Condo Renovation",
+    "ARC Interiors",
+    "ARC"
+  ],
   "author": "ARC Interiors & Cabinetry",
   "license": "ISC",
   "type": "module",

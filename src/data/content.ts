@@ -20,7 +20,7 @@ export const spaces: Array<{
   },
   {
     name: "Cabinets",
-    description: "Purpose-built cabinetry shaped around available space, storage needs, and interior character.",
+    description: "Modular cabinets and purpose-built cabinetry shaped around available space, storage needs, and interior character.",
     imageId: "cabinets-p08",
   },
   {
@@ -48,8 +48,8 @@ export const faqs = [
   },
   {
     question: "Do you create custom cabinetry?",
-    answer: "Yes. We provide custom cabinetry solutions based on the available space, storage needs, and preferred interior style.",
-    short: "Yes. Cabinetry is planned around your available space, storage needs, and preferred style.",
+    answer: "Yes. ARC Interiors is a modular cabinet maker providing modular cabinets and custom cabinetry based on the available space, storage needs, and preferred interior style.",
+    short: "Yes. We are a modular cabinet maker for modular cabinets in the Philippines and custom cabinetry.",
   },
   {
     question: "Can you work on bedroom interiors?",
@@ -75,6 +75,11 @@ export const faqs = [
     question: "Where are you located?",
     answer: "ARC Interiors & Cabinetry can be reached through locations in Santolan, Pasig and Jubilation South, Biñan, Laguna.",
     short: "We have locations in Santolan, Pasig and Jubilation South, Biñan, Laguna.",
+  },
+  {
+    question: "Do you handle house renovation and condo renovation?",
+    answer: "Yes. ARC Interiors works on house renovation, condo renovation, and DMCI condo renovation, along with interior and cabinetry work for the spaces shown on this site.",
+    short: "Yes. House renovation, condo renovation, and DMCI condo renovation, plus interior and cabinetry work.",
   },
   {
     question: "How can I inquire about a project?",
